@@ -19,11 +19,11 @@ a.genTreeFromDf()
 def read_root():
     return {"Hello": "World"}
 
-@app.post("/execution")
+@app.post("/executions")
 def create_execution():
   return {"requisition_id": a.createExecution()}
 
-@app.get("/question/{execution_id}")
+@app.get("/questions/{execution_id}")
 def get_question(execution_id):
   return {"result": a.getQuestion(int(execution_id))}
 
