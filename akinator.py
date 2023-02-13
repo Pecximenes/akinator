@@ -67,6 +67,8 @@ class Akinator:
       return None
     if len(self.executions[id]) == 0:
       return None
+    if self.executions[id][-1] == None:
+      return None
     return self.executions[id][-1]['label']
 
   def execute(self, id, inp):
